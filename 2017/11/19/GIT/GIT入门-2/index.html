@@ -105,20 +105,23 @@
 
 
 
-<meta name="description" content="Pro Git, Second Edition 读书笔记 本人菜鸟，若发现错误，感激指正~~！      GIT入门(1) 本节必知名词 GIT特点 集中式版本控制系统和分布式版本控制系统 GIT存储数据的方式 GIT的三大状态【重点】        GIT入门(1)本节必知名词 VCS : Version Control System 版本控制系统 CVCS : Centralized Vers">
+<meta name="description" content="Pro Git, Second Edition 读书笔记   初次安装GIT后需要进行的配置详解   本人菜鸟，若发现错误，感激指正~~!          GIT入门(2)——首次配置 配置详解 常用的配置变量 检查配置项 删除配置项        GIT入门(2)——首次配置配置详解通过git config工具来配置GIT环境，通过它我们能获得和设置配置变量。GIT的配置变量存储在三个不同的位">
 <meta name="keywords" content="GIT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello Git">
-<meta property="og:url" content="http://yoursite.com/2017/11/18/Hello Git/index.html">
+<meta property="og:title" content="GIT入门(2)">
+<meta property="og:url" content="http://yoursite.com/2017/11/19/GIT/GIT入门-2/index.html">
 <meta property="og:site_name" content="One More Time">
-<meta property="og:description" content="Pro Git, Second Edition 读书笔记 本人菜鸟，若发现错误，感激指正~~！      GIT入门(1) 本节必知名词 GIT特点 集中式版本控制系统和分布式版本控制系统 GIT存储数据的方式 GIT的三大状态【重点】        GIT入门(1)本节必知名词 VCS : Version Control System 版本控制系统 CVCS : Centralized Vers">
+<meta property="og:description" content="Pro Git, Second Edition 读书笔记   初次安装GIT后需要进行的配置详解   本人菜鸟，若发现错误，感激指正~~!          GIT入门(2)——首次配置 配置详解 常用的配置变量 检查配置项 删除配置项        GIT入门(2)——首次配置配置详解通过git config工具来配置GIT环境，通过它我们能获得和设置配置变量。GIT的配置变量存储在三个不同的位">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ouq9v8coj.bkt.clouddn.com/images/versionControll.bmp">
-<meta property="og:updated_time" content="2017-11-18T17:34:40.008Z">
+<meta property="og:image" content="http://ouq9v8coj.bkt.clouddn.com/images/GIT%E5%85%A5%E9%97%A82-1.jpg">
+<meta property="og:image" content="http://ouq9v8coj.bkt.clouddn.com/images/GIT%E5%85%A5%E9%97%A82-2.gif">
+<meta property="og:image" content="http://ouq9v8coj.bkt.clouddn.com/images/GIT%E5%85%A5%E9%97%A82-3.gif">
+<meta property="og:image" content="http://ouq9v8coj.bkt.clouddn.com/images/GIT%E5%85%A5%E9%97%A82-4.gif">
+<meta property="og:updated_time" content="2017-11-19T15:55:05.079Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello Git">
-<meta name="twitter:description" content="Pro Git, Second Edition 读书笔记 本人菜鸟，若发现错误，感激指正~~！      GIT入门(1) 本节必知名词 GIT特点 集中式版本控制系统和分布式版本控制系统 GIT存储数据的方式 GIT的三大状态【重点】        GIT入门(1)本节必知名词 VCS : Version Control System 版本控制系统 CVCS : Centralized Vers">
-<meta name="twitter:image" content="http://ouq9v8coj.bkt.clouddn.com/images/versionControll.bmp">
+<meta name="twitter:title" content="GIT入门(2)">
+<meta name="twitter:description" content="Pro Git, Second Edition 读书笔记   初次安装GIT后需要进行的配置详解   本人菜鸟，若发现错误，感激指正~~!          GIT入门(2)——首次配置 配置详解 常用的配置变量 检查配置项 删除配置项        GIT入门(2)——首次配置配置详解通过git config工具来配置GIT环境，通过它我们能获得和设置配置变量。GIT的配置变量存储在三个不同的位">
+<meta name="twitter:image" content="http://ouq9v8coj.bkt.clouddn.com/images/GIT%E5%85%A5%E9%97%A82-1.jpg">
 
 
 
@@ -148,13 +151,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/18/Hello Git/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/19/GIT/GIT入门-2/"/>
 
 
 
 
 
-  <title>Hello Git | One More Time</title>
+  <title>GIT入门(2) | One More Time</title>
   
 
 
@@ -310,7 +313,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/18/Hello Git/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/19/GIT/GIT入门-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cloud Sen">
@@ -327,7 +330,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello Git</h1>
+          <h1 class="post-title" itemprop="name headline">GIT入门(2)</h1>
         
 
         <div class="post-meta">
@@ -339,8 +342,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-18T16:56:51+08:00">
-                2017-11-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-19T12:15:54+08:00">
+                2017-11-19
               </time>
             
 
@@ -380,9 +383,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/11/18/Hello Git/#comments" itemprop="discussionUrl">
+                <a href="/2017/11/19/GIT/GIT入门-2/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/11/18/Hello Git/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/11/19/GIT/GIT入门-2/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -390,7 +393,7 @@
 
           
           
-             <span id="/2017/11/18/Hello Git/" class="leancloud_visitors" data-flag-title="Hello Git">
+             <span id="/2017/11/19/GIT/GIT入门-2/" class="leancloud_visitors" data-flag-title="GIT入门(2)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -421,116 +424,99 @@
       
 
       
-        <blockquote class="blockquote-center"><p>Pro Git, Second Edition 读书笔记</p>
-<p>本人菜鸟，若发现错误，感激指正~~！</p>
-</blockquote>
+        <blockquote class="blockquote-center"><p>Pro Git, Second Edition 读书笔记  </p>
+<p>初次安装GIT后需要进行的配置详解  </p>
+<p>本人菜鸟，若发现错误，感激指正~~!  </p>
+</blockquote>  
 <div class="toc">
 
 <!-- toc -->
 <ul>
-<li><a href="#git-ru-men-1">GIT入门(1)</a><ul>
-<li><a href="#ben-jie-bi-zhi-ming-ci">本节必知名词</a></li>
-<li><a href="#git-te-dian">GIT特点</a></li>
-<li><a href="#ji-zhong-shi-ban-ben-kong-zhi-xi-tong-he-fen-bu-shi-ban-ben-kong-zhi-xi-tong">集中式版本控制系统和分布式版本控制系统</a></li>
-<li><a href="#git-cun-chu-shu-ju-de-fang-shi">GIT存储数据的方式</a></li>
-<li><a href="#git-de-san-da-zhuang-tai-chong-dian">GIT的三大状态【重点】</a></li>
+<li><a href="#git-ru-men-2-shou-ci-pei-zhi">GIT入门(2)——首次配置</a><ul>
+<li><a href="#pei-zhi-xiang-jie">配置详解</a></li>
+<li><a href="#chang-yong-de-pei-zhi-bian-liang">常用的配置变量</a></li>
+<li><a href="#jian-cha-pei-zhi-xiang">检查配置项</a></li>
+<li><a href="#shan-chu-pei-zhi-xiang">删除配置项</a></li>
 </ul>
 </li>
 </ul>
 <!-- tocstop -->
-</div>
-
-<p><img src="http://ouq9v8coj.bkt.clouddn.com/images/versionControll.bmp" alt="Git"></p>
-<h1><span id="git-ru-men-1">GIT入门(1)</span><a href="#git-ru-men-1" class="header-anchor">#</a></h1><h2><span id="ben-jie-bi-zhi-ming-ci">本节必知名词</span><a href="#ben-jie-bi-zhi-ming-ci" class="header-anchor">#</a></h2><ul>
-<li>VCS : Version Control System 版本控制系统</li>
-<li>CVCS : Centralized Version Control System 集中式版本控制系统</li>
-<li>DVCS : Distributed Version Control System 分布式版本控制系统</li>
-<li>stage/unstage : 暂存/未暂存</li>
-<li>repository : 仓库</li>
-<li>commit : 提交暂存到<strong>本地 </strong>数据库</li>
-<li>push : 使用本地引用更新远程引用，同时发送完成给定引用所需的对象</li>
-<li>pull : 将远程存储库中的更改合并到当前分支中</li>
-<li>check out : 检出项目</li>
-</ul>
-<h2><span id="git-te-dian">GIT特点</span><a href="#git-te-dian" class="header-anchor">#</a></h2><ul>
-<li>速度快</li>
-<li>设计简洁</li>
-<li>对非线性开发强有力的支持</li>
-<li>分布式设计</li>
-</ul>
-<a id="more"></a>
-<h2><span id="ji-zhong-shi-ban-ben-kong-zhi-xi-tong-he-fen-bu-shi-ban-ben-kong-zhi-xi-tong">集中式版本控制系统和分布式版本控制系统</span><a href="#ji-zhong-shi-ban-ben-kong-zhi-xi-tong-he-fen-bu-shi-ban-ben-kong-zhi-xi-tong" class="header-anchor">#</a></h2><ol>
-<li><p>集中式版本控制系统：</p>
-<p>用一个单一的服务器，保存一个文件的所有修订版本，多个客户端可以从这个中心位置检出文件。常用的CVCS有：SVN、CVS等。</p>
-<ul>
-<li>缺点：<ul>
-<li>当中心服务器停电时，所有人都不能提交更改，也不能检出最新的文件；</li>
-<li>当中心服务器崩溃，且无法恢复备份时，整个版本的历史纪录全部丢失。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>分布式版本控制系统：</p>
-<p>客户端并非仅仅是检出文件的最新快照，而是对代码仓库进行完整的镜像，每一次检出都是对数据的一次完整备份。一旦服务器发生故障，任何一个客户端都可以使用自己本地镜像来恢复服务器。</p>
-</li>
-</ol>
-<div class="note info"><p>这里说简单点，就是CVCS的版本控制在中央仓库中维护，而DVCS的版本控制在本地维护。</p>
-<p>这里我举两个平时工作中的例子，就能够体会到GIT的好处了：</p>
-<ul>
-<li><p>随时进行版本控制</p>
-<p>假如项目组使用CVS(一个集中式版本控制系统)来控制代码版本，然后又没有使用分支，所有开发人员都在主干上开发。现在项目组的其他成员正在准备一个大版本更新，而你拿到的是下一个版本的开发需求，两者需要同时进行。因此，为了本次版本上线后不会出问题，是不允许你提交代码到远程服务器的(如果你提交代码，则会加入到本次上线的程序中)。</p>
-<p>对于集中式版本管理，所有的版本控制都在中央仓库，如果不提交代码，是无法进行版本控制的。这样一来，如果需求发生变动，需要将代码回退到某个时间段，这是不可能的，经常导致返工甚至重写(非常蛋疼，别问我咋知道)。</p>
-<p>然而GIT不一样，GIT在本地拥有历史库，随时都能提交变更到本地，想回退就回退，并不会影响远程服务器，开发结束后，push到远程服务器即可。</p>
-</li>
-</ul></div>
-<div class="note info"><ul>
-<li><p>随地进行项目开发</p>
-<p>集中式版本控制系统最怕的就是断网，要正常工作，就得呆在公司或者在家使用公司内部的vpn。不要忘记，CVCS不提交代码到远程服务器，就无法进行版本控制。</p>
-<p>使用GIT后，一切都迎刃而解。</p>
-<p>假设现在有一个新项目，由我，小绿，大绿一起开发，我将项目主体结构搭建完毕后，push到远程服务器。小绿，大绿从远程服务器pull下代码，这时我们三人都拥有了仓库的一个快照。</p>
-<p>然后这次需求要开发A,B,C三个模块，我负责A，小绿负责B，大绿负责C，分配好任务后，大家就可以和远程服务器说拜拜，从此各奔东西，每个人的电脑都有自己的版本控制，想在哪写代码就在哪写代码，完成之后，大家一起聚个会，将代码push到远程服务器即可，如果三个模块有交叉的点，解决一下冲突即可。</p>
-</li>
-</ul>
-<p>惊喜不惊喜？意外不意外?GIT IS THE GOD!</p></div>
-<h2><span id="git-cun-chu-shu-ju-de-fang-shi">GIT存储数据的方式</span><a href="#git-cun-chu-shu-ju-de-fang-shi" class="header-anchor">#</a></h2><p>其他版本控制系统，存储的是<strong>每个文件与初始版本的差异</strong>，注意！存的是差异，而不是当前文件。</p>
-<p>GIT更像是一个小型的文件系统，每次提交更新时，都会对当时的全部文件制作一个快照并保存这个快照的索引。如果文件没有发生变动，Git 不再重新存储该文件，而是只保留一个链接指向之前存储的文件。</p>
-<p>GIT所有的数据在存储前，都会进行校验和计算，随后以<strong>校验和</strong>来引用对应的数据。</p>
-<p>GIT的校验和机制采用的<strong>SHA-1</strong>散列，GIT通过信息的散列值来存储信息，而不是文件名。</p>
+<p></div><br><img src="http://ouq9v8coj.bkt.clouddn.com/images/GIT%E5%85%A5%E9%97%A82-1.jpg" alt="git">  </p>
+<h1><span id="git-ru-men-2-shou-ci-pei-zhi">GIT入门(2)——首次配置</span><a href="#git-ru-men-2-shou-ci-pei-zhi" class="header-anchor">#</a></h1><h2><span id="pei-zhi-xiang-jie">配置详解</span><a href="#pei-zhi-xiang-jie" class="header-anchor">#</a></h2><p>通过<strong>git config</strong>工具来配置GIT环境，通过它我们能获得和设置配置变量。<br>GIT的配置变量存储在三个不同的位置：  </p>
+<p>对于Linux系统:    </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">传入参数</th>
+<th style="text-align:left">配置变量的位置</th>
+<th style="text-align:left">解释</th>
+<th style="text-align:left">优先级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">“–system”</td>
+<td style="text-align:left">/etc/gitconfig</td>
+<td style="text-align:left">包含了系统中所有用户及其仓库</td>
+<td style="text-align:left">低</td>
+</tr>
+<tr>
+<td style="text-align:left">“–global”</td>
+<td style="text-align:left">~/.gitconfig 或 ~/.config/git/config</td>
+<td style="text-align:left">针对当前PC登录者</td>
+<td style="text-align:left">中</td>
+</tr>
+<tr>
+<td style="text-align:left">无参</td>
+<td style="text-align:left">git/config</td>
+<td style="text-align:left">针对当前仓库</td>
+<td style="text-align:left">高</td>
+</tr>
+</tbody>
+</table>
+<p>对于Windows系统：<br>可以通过在GIT BASH中键入<code>git config --list --show-origin</code>来查看各个配置属性的存放位置：<br><img src="http://ouq9v8coj.bkt.clouddn.com/images/GIT%E5%85%A5%E9%97%A82-2.gif" alt="demo1"><br>由上方表格可知，GIT的配置文件在不同域具有不同的优先级，git config 会选择优先级较高的配置。<br><a id="more"></a>  </p>
+<h2><span id="chang-yong-de-pei-zhi-bian-liang">常用的配置变量</span><a href="#chang-yong-de-pei-zhi-bian-liang" class="header-anchor">#</a></h2><table>
+<thead>
+<tr>
+<th style="text-align:left">变量名</th>
+<th style="text-align:left">作用</th>
+<th style="text-align:left">建议值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">user.name</td>
+<td style="text-align:left">提交者名字</td>
+<td style="text-align:left">自定</td>
+</tr>
+<tr>
+<td style="text-align:left">user.email</td>
+<td style="text-align:left">提交者邮箱</td>
+<td style="text-align:left">自定</td>
+</tr>
+<tr>
+<td style="text-align:left">core.editor</td>
+<td style="text-align:left">文本编辑器</td>
+<td style="text-align:left">vim</td>
+</tr>
+<tr>
+<td style="text-align:left">core.autocrlf</td>
+<td style="text-align:left">自动转换换行符</td>
+<td style="text-align:left">false</td>
+</tr>
+<tr>
+<td style="text-align:left">core.safecrlf</td>
+<td style="text-align:left">是否禁止提交混合换行符的文件</td>
+<td style="text-align:left">true  </td>
+</tr>
+</tbody>
+</table>
+<p>使用git config 依次进行设置(添加<code>--global</code>后，当前用户不管在系统中执行什么操作都会使用这些配置参数):<br><figure class="highlight shell"><figcaption><span>参数配置</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> git config --global user.name "CloudSen"</div><div class="line"><span class="meta">$</span> git config --global user.email "www.402645063@gmail.com"</div><div class="line"><span class="meta">$</span> git config --global core.editor "vim"</div><div class="line"><span class="meta">$</span> git config --core.autocrlf false</div><div class="line"><span class="meta">$</span> git config --core.autosafecrlf true</div></pre></td></tr></table></figure><br><img src="http://ouq9v8coj.bkt.clouddn.com/images/GIT%E5%85%A5%E9%97%A82-3.gif" alt="demo2"><br>正所谓没有消息，就是最好的消息。如果一次键入以上配置后，没有任何提示信息，那么就表示设置成功了~！<br><div class="note info"><p>编辑器按自己喜好定，可以是emacs、vi、notepad++等。<br>Windows的回车换行符是CRLF，而UNIX使用的LF，两者是不兼容的。<br>类似的历史问题还有Windows的反斜杠(反人类)。  </p></div><br><div class="note warning"><p>GIT的换行符转换机制还存在bug，有时会出现意想不到的问题，因此建议不使用GIT的自动转换，并且禁止提交包含混合换行符的文件。</p></div>  </p>
+<h2><span id="jian-cha-pei-zhi-xiang">检查配置项</span><a href="#jian-cha-pei-zhi-xiang" class="header-anchor">#</a></h2><p>设置好配置项后通过<code>--list</code>参数，来列出当前GIT可以找到的所有配置：<br><figure class="highlight shell"><figcaption><span>参数配置</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> git config --list  </div></pre></td></tr></table></figure><br>也可以查看某个具体的配置项：<br><figure class="highlight shell"><figcaption><span>参数配置</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> git config --get &lt;配置变量名&gt;</div></pre></td></tr></table></figure><br><img src="http://ouq9v8coj.bkt.clouddn.com/images/GIT%E5%85%A5%E9%97%A82-4.gif" alt="demo3"><br>若同一个配置变量被打印出多次，说明这个变量在不同的域中进行了设置，GIT会使用最后打印出的那个值。  </p>
+<h2><span id="shan-chu-pei-zhi-xiang">删除配置项</span><a href="#shan-chu-pei-zhi-xiang" class="header-anchor">#</a></h2><p>使用<code>--unset</code>参数来删除配置项：<br><figure class="highlight shell"><figcaption><span>参数配置</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> git config --unset &lt;配置变量名&gt;</div></pre></td></tr></table></figure>  </p>
 <blockquote>
-<p>快照，可以近似理解为备份，但绝不是复制粘贴那么简单，快照能用来恢复原来的状态。</p>
-<p>这里也表明了GIT的速度为什么快，当你要查看某个版本时，由于其他版本控制系统存储的是与初始版本的差异，因此在加载之前一定会有一个合并的操作，而GIT不需要，直接加载快照即可。</p>
+<p>至此，已经对GIT有了一个初步的了解，并配置好了身份信息，接下来马上开始GIT的基础知识。</p>
 </blockquote>
-<p>GIT基本上所有的操作都是像数据库中添加数据，因此很难发生数据丢失的惨况。</p>
-<h2><span id="git-de-san-da-zhuang-tai-chong-dian">GIT的三大状态【重点】</span><a href="#git-de-san-da-zhuang-tai-chong-dian" class="header-anchor">#</a></h2><p>GIT中文件的状态有以下三种：</p>
-<ul>
-<li><p>已提交(Committed)</p>
-<p>表示数据已经被安全地存入<strong>本地</strong>数据库中。</p>
-</li>
-<li><p>已修改(modified)</p>
-<p>表示文件发生了改动，但未提交到数据库。</p>
-</li>
-<li><p>已暂存(staged)</p>
-<p>表示对发生改动的文件做好了标识，并将其加入<strong>下一次</strong>要提交的快照中。</p>
-</li>
-</ul>
-<p>因此GIT项目中，三个主要的区域为：</p>
-<ul>
-<li><p>GIT目录</p>
-<p>保存项目元数据和对象数据库。</p>
-</li>
-<li><p>工作目录</p>
-<p>是项目某个版本的单次检出，这些文件从GIT目录下的压缩数据库内被提取出，放到磁盘上以供使用和修改。</p>
-</li>
-<li><p>暂存区</p>
-<p>是一个文件，一般位于GIT目录中，保存了下次要提交内容的相关信息。</p>
-</li>
-</ul>
-<p>GIT基本工作流如下：    </p>
-<p><div id="sequence-0"></div></p>
-<p><div id="flowchart-0" class="flow-chart"></div><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">
-</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">workingDir->staging area: stage files
-staging area->git directory(repository): commit
-git directory(repository)->workingDir: check out</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
 
       
     </div>
@@ -561,8 +547,8 @@ git directory(repository)->workingDir: check out</textarea><textarea id="sequenc
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/12/test/" rel="next" title="test">
-                <i class="fa fa-chevron-left"></i> test
+              <a href="/2017/11/18/GIT/Hello Git/" rel="next" title="Hello Git">
+                <i class="fa fa-chevron-left"></i> Hello Git
               </a>
             
           </div>
@@ -682,7 +668,7 @@ git directory(repository)->workingDir: check out</textarea><textarea id="sequenc
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -743,7 +729,7 @@ git directory(repository)->workingDir: check out</textarea><textarea id="sequenc
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">GIT入门(1)#</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">本节必知名词#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">GIT特点#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">集中式版本控制系统和分布式版本控制系统#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.4.</span> <span class="nav-text">GIT存储数据的方式#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.5.</span> <span class="nav-text">GIT的三大状态【重点】#</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">GIT入门(2)——首次配置#</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">配置详解#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">常用的配置变量#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">检查配置项#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.4.</span> <span class="nav-text">删除配置项#</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -920,9 +906,9 @@ git directory(repository)->workingDir: check out</textarea><textarea id="sequenc
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/11/18/Hello Git/';
-          this.page.identifier = '2017/11/18/Hello Git/';
-          this.page.title = 'Hello Git';
+          this.page.url = 'http://yoursite.com/2017/11/19/GIT/GIT入门-2/';
+          this.page.identifier = '2017/11/19/GIT/GIT入门-2/';
+          this.page.title = 'GIT入门(2)';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://CloudSen.disqus.com/embed.js';
