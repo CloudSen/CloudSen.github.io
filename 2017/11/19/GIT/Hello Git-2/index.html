@@ -114,7 +114,9 @@
 <meta property="og:description" content="Pro Git, Second Edition 读书笔记   快速上手GIT，学会初始化本地仓库，进行简单的版本管理操作   本人菜鸟，若发现错误，感激指正~~!">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ouq9v8coj.bkt.clouddn.com/images/gittest1.gif">
-<meta property="og:updated_time" content="2017-11-21T16:15:10.012Z">
+<meta property="og:image" content="http://ouq9v8coj.bkt.clouddn.com/images/gittest2.gif">
+<meta property="og:image" content="http://ouq9v8coj.bkt.clouddn.com/images/gittest3.gif">
+<meta property="og:updated_time" content="2017-11-21T16:30:23.974Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello Git(2)">
 <meta name="twitter:description" content="Pro Git, Second Edition 读书笔记   快速上手GIT，学会初始化本地仓库，进行简单的版本管理操作   本人菜鸟，若发现错误，感激指正~~!">
@@ -433,6 +435,7 @@
 <li><a href="#ben-jie-ming-ci">本节名词</a></li>
 <li><a href="#an-zhuang-wan-git-hou-jian-dan-de-she-zhi">安装完GIT后简单的设置</a></li>
 <li><a href="#chu-shi-hua-ben-di-git-cang-ku">初始化本地GIT仓库</a></li>
+<li><a href="#git-chu-chang-shi">GIT初尝试</a></li>
 </ul>
 <!-- tocstop -->
 </div>
@@ -447,14 +450,20 @@
 </blockquote>
 <p>初始化GIT仓库的指令是:<code>$ git init</code>。  </p>
 <ol>
-<li><p>首先，我们要在磁盘上选择一个已存在的目录或新建一个目录当做我们的GIT仓库。<br>在F盘新建一个目录GitRepository:</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">    $ cd f  </div><div class="line">    $ mkdir GitRepository  </div><div class="line">    $ cd ./GitRepository</div><div class="line">    ```  </div><div class="line">    ![demo2](http://ouq9v8coj.bkt.clouddn.com/images/gittest2.gif)  </div><div class="line">2. 在GitRepository文件夹初始化仓库</div><div class="line">    ```shell</div><div class="line">    $ git init</div><div class="line">    ```  </div><div class="line">    ![demo3](http://ouq9v8coj.bkt.clouddn.com/images/gittest3.gif)  </div><div class="line">此时我们就成功建立了一个GIT版本控制仓库，在GitRepository文件夹中多了一个.git文件夹，它的作用就是用来跟踪和管理版本库。  </div><div class="line"></div><div class="line"><span class="meta">#</span># GIT初尝试</div><div class="line">有了GIT仓库后，我们就可以把文件放入仓库，进行版本控制了。  </div><div class="line"></div><div class="line">1. 首先在仓库新建一个`test.txt`文本文件,并随便写入一点内容(可以使用系统图形界面直接新建或复制一个文件过来):  </div><div class="line">    ```shell</div><div class="line">    $ cd /f/GitRepository</div><div class="line">    $ vi test.txt</div><div class="line">    ```  </div><div class="line">    键入`i`进行插入，编辑完成后，按`ESC`后输入`:wq`保存并退出vi编辑器,此时就创建了一个新的test.txt,并且添加了一些文本。假设文本如下:</div></pre></td></tr></table></figure>
-<p> Git is the god.<br> Nintendo Switch NO.1<br> ```</p>
+<li>首先，我们要在磁盘上选择一个已存在的目录或新建一个目录当做我们的GIT仓库。<br>在F盘新建一个目录GitRepository:   <figure class="highlight shell"><figcaption><span>新建目录</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> cd f  </div><div class="line"><span class="meta">$</span> mkdir GitRepository  </div><div class="line"><span class="meta">$</span> cd ./GitRepository  </div></pre></td></tr></table></figure>  
+ <img src="http://ouq9v8coj.bkt.clouddn.com/images/gittest2.gif" alt="demo2">  </li>
+<li>在GitRepository文件夹初始化仓库     <figure class="highlight shell"><figcaption><span>初始化仓库</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> git init  </div></pre></td></tr></table></figure>  
+ <img src="http://ouq9v8coj.bkt.clouddn.com/images/gittest3.gif" alt="demo3"><br>此时我们就成功建立了一个GIT版本控制仓库，在GitRepository文件夹中多了一个.git文件夹，它的作用就是用来跟踪和管理版本库。  </li>
+</ol>
+<h2><span id="git-chu-chang-shi">GIT初尝试</span><a href="#git-chu-chang-shi" class="header-anchor">#</a></h2><p>有了GIT仓库后，我们就可以把文件放入仓库，进行版本控制了。  </p>
+<ol>
+<li><p>首先在仓库新建一个<code>test.txt</code>文本文件,并随便写入一点内容(可以使用系统图形界面直接新建或复制一个文件过来):  </p>
+ <figure class="highlight shell"><figcaption><span>新建文件</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> cd /f/GitRepository</div><div class="line"><span class="meta">$</span> vi test.txt</div></pre></td></tr></table></figure>  
+<p> 键入<code>i</code>进行插入，编辑完成后，按<code>ESC</code>后输入<code>:wq</code>保存并退出vi编辑器,此时就创建了一个新的test.txt,并且添加了一些文本。假设文本如下:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Git is the god.</div><div class="line">Nintendo Switch NO.1</div></pre></td></tr></table></figure>  
 </li>
 <li><p>现在仓库里有了文件，但是还差一步才能对它进行版本控制：  </p>
-<pre><code class="shell"><span class="meta">$</span> git add test.txt
-<span class="meta">$</span> git commit -m "新建了test.txt文本"
-</code></pre>
+ <figure class="highlight shell"><figcaption><span>版本控制</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> git add test.txt</div><div class="line"><span class="meta">$</span> git commit -m "新建了test.txt文本"</div></pre></td></tr></table></figure>
 </li>
 </ol>
 
@@ -673,7 +682,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">本节名词#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">安装完GIT后简单的设置#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">初始化本地GIT仓库#</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">本节名词#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">安装完GIT后简单的设置#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">初始化本地GIT仓库#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">GIT初尝试#</span></a></li></ol></div>
             
 
           </div>
@@ -758,14 +767,13 @@
   
 
 
-
-
-
-
-
-
   
-  
+
+
+
+
+
+
 
 
 
@@ -803,12 +811,7 @@
 
   
   
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
